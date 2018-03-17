@@ -34,8 +34,9 @@ class RedScare(object):
         artist = artistEl.text.strip()
         caliShows = detailsEl.find_all("td", string=re.compile('CA$'))
         for show in caliShows:
+            city = show.string.strip()
             venue = show.next_sibling.next_sibling.string.strip()
             date = show.previous_sibling.previous_sibling.string.strip()
-            results.append(Concert(artist, venue, date))
+            results.append(Concert(artist, city, venue, date))
 
         return results

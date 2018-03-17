@@ -1,8 +1,9 @@
 import json
 
 class Concert(object):
-    def __init__(self, band=None, venue=None, date=None):
+    def __init__(self, band=None, city=None, venue=None, date=None):
         self.band = band
+        self.city = city
         self.venue = venue
         self.date = date
 
