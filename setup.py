@@ -35,7 +35,7 @@ setup(
     description="Scrape Red Scare for LA tour dates",
     entry_points={
         'console_scripts': [
-            'red_scare_tour_dates=red_scare_tour_dates.cli:main',
+            'red_scare=red_scare.cli:main',
         ],
     },
     install_requires=requirements,
